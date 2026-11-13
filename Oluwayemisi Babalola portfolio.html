@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Oluwayemisi Babalola, AI Engineer, Certified Business Analyst and B.Pharm student.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Oluwayemisi Babalola | AI Engineer & Business Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090e1c; --panel: #111a2d; --panel2: #0e1729; --text: #f4f7ff;
+      --muted: #aab5ca; --line: rgba(178,197,230,.16); --accent: #8b9cff;
+      --accent2: #62e6c5; --white: #fff; --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--text); background: radial-gradient(circle at 85% 4%, rgba(91,113,255,.16), transparent 28rem), radial-gradient(circle at 5% 35%, rgba(40,205,170,.08), transparent 25rem), var(--bg); font-family: Manrope, sans-serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 44px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(18px); background: rgba(9,14,28,.82); border-bottom: 1px solid var(--line); }
+    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.05rem; }
+    .brand span { color: var(--accent2); }
+    .navlinks { display: flex; gap: 26px; align-items: center; color: var(--muted); font-size: .88rem; }
+    .navlinks a:hover, .textlink:hover { color: var(--accent2); }
+    .menu { display: none; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 10px; padding: 8px 12px; }
+    .hero { padding: 112px 0 90px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 55px; align-items: center; }
+    .eyebrow { font: 500 .76rem 'DM Mono', monospace; letter-spacing: .13em; text-transform: uppercase; color: var(--accent2); }
+    h1 { font-size: clamp(2.8rem, 6.2vw, 5.3rem); line-height: 1.04; letter-spacing: -.065em; margin: 20px 0 24px; max-width: 780px; }
+    h1 .grad { background: linear-gradient(100deg, #aab5ff, #65e8ca); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { max-width: 690px; color: var(--muted); font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 19px; border-radius: 11px; font-weight: 800; font-size: .9rem; border: 1px solid var(--line); transition: .2s ease; }
+    .btn.primary { color: #08111b; background: linear-gradient(110deg, var(--accent2), #b3c0ff); border: 0; }
+    .btn:hover { transform: translateY(-2px); }
+    .hero-card { border: 1px solid var(--line); border-radius: 24px; padding: 27px; background: linear-gradient(145deg, rgba(24,36,60,.92), rgba(13,22,39,.88)); box-shadow: 0 25px 80px rgba(0,0,0,.22); }
+    .orb { width: 68px; height: 68px; border-radius: 20px; display: grid; place-items: center; color: #091322; font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, var(--accent2), #a8b5ff); margin-bottom: 24px; }
+    .hero-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+    .hero-card p { color: var(--muted); margin: 0; font-size: .9rem; }
+    .mini-tags, .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .mini-tags { margin-top: 22px; }
+    .tag { font: 500 .72rem 'DM Mono', monospace; color: #d4ddf2; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; background: rgba(255,255,255,.025); }
+    section { padding: 78px 0; border-top: 1px solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 32px; }
+    h2 { margin: 8px 0 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.05em; }
+    .section-intro { color: var(--muted); max-width: 510px; margin: 0; font-size: .94rem; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
+    .panel { background: linear-gradient(145deg, rgba(19,29,49,.94), rgba(13,21,37,.94)); border: 1px solid var(--line); border-radius: 18px; padding: 27px; }
+    .panel p { color: var(--muted); margin: 0 0 14px; }
+    .panel p:last-child { margin-bottom: 0; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fact { padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.02); }
+    .fact strong { display: block; font-size: 1.08rem; }
+    .fact span { color: var(--muted); font-size: .78rem; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .project { display: flex; flex-direction: column; min-height: 100%; overflow: hidden; }
+    .project-top { min-height: 168px; padding: 25px; display: flex; align-items: end; background: radial-gradient(circle at 80% 15%, rgba(139,156,255,.28), transparent 14rem), linear-gradient(135deg, #172642, #10192c); border-bottom: 1px solid var(--line); }
+    .project-top.green { background: radial-gradient(circle at 80% 15%, rgba(98,230,197,.22), transparent 14rem), linear-gradient(135deg, #153238, #10192c); }
+    .project-symbol { font: 500 2.2rem 'DM Mono', monospace; color: var(--accent2); }
+    .project-body { padding: 25px; display: flex; flex-direction: column; flex: 1; }
+    .project-body h3 { font-size: 1.28rem; margin: 0 0 10px; letter-spacing: -.03em; }
+    .project-body p { color: var(--muted); font-size: .9rem; margin: 0 0 18px; }
+    .project-body .tags { margin-bottom: 22px; }
+    .project-link { margin-top: auto; display: inline-flex; gap: 9px; color: var(--accent2); font-weight: 800; font-size: .88rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .skill h3 { margin: 0 0 14px; font-size: 1rem; }
+    .skill p { margin: 0; color: var(--muted); font-size: .87rem; }
+    .experience { display: grid; grid-template-columns: 180px 1fr; gap: 25px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .experience:last-child { border-bottom: 0; }
+    .when { color: var(--accent2); font: 500 .75rem 'DM Mono', monospace; padding-top: 5px; }
+    .experience h3 { margin: 0 0 5px; font-size: 1.05rem; }
+    .experience .place { color: var(--muted); font-size: .84rem; margin-bottom: 9px; }
+    .experience p { color: var(--muted); margin: 0; font-size: .88rem; }
+    .contact { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 25px; padding: 36px; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(115deg, rgba(28,44,73,.95), rgba(16,36,43,.9)); }
+    .contact h2 { max-width: 600px; }
+    .contact p { color: var(--muted); margin-bottom: 0; }
+    footer { padding: 27px 0 38px; color: #8491aa; font-size: .78rem; display: flex; justify-content: space-between; gap: 20px; }
+    .textlink { color: var(--muted); text-decoration: underline; text-decoration-color: rgba(170,181,202,.35); text-underline-offset: 4px; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; padding: 82px 0 65px; gap: 35px; }
+      .hero-card { max-width: 520px; }
+      .about-grid, .projects { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .section-head { display: block; }
+      .section-intro { margin-top: 14px; }
+      .contact { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      nav { min-height: 66px; }
+      .menu { display: block; }
+      .navlinks { display: none; position: absolute; left: 16px; right: 16px; top: 66px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #111a2d; flex-direction: column; align-items: flex-start; }
+      .navlinks.open { display: flex; }
+      h1 { font-size: clamp(2.7rem, 13vw, 4.1rem); }
+      section { padding: 60px 0; }
+      .skills-grid, .facts { grid-template-columns: 1fr; }
+      .experience { grid-template-columns: 1fr; gap: 7px; }
+      .contact { padding: 25px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#home">OB<span>.</span></a>
+        <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero" id="home" style="border:0">
+        <div>
+          <div class="eyebrow">AI Engineer · Business Analyst · B.Pharm Student</div>
+          <h1>Building useful technology at the intersection of <span class="grad">AI and real-world problems.</span></h1>
+          <p class="lead">I'm Oluwayemisi Babalola, an aspiring AI Engineer and Certified Business Analyst with a foundation in pharmaceutical sciences. I use data, machine learning and product thinking to build practical solutions that make everyday processes smarter.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore my projects <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="btn" href="mailto:byemisi08@gmail.com">Get in touch</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="orb">OB</div>
+          <h3>Curious by nature. Practical by design.</h3>
+          <p>Interested in building AI-powered products, intelligent workflows and data-informed solutions across healthcare, business and technology.</p>
+          <div class="mini-tags"><span class="tag">Machine Learning</span><span class="tag">Python</span><span class="tag">Product Thinking</span><span class="tag">Healthcare AI</span></div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="section-head">
+          <div><div class="eyebrow">01 / About</div><h2>Technology with context.</h2></div>
+          <p class="section-intro">I bring together analytical thinking, technical skills and an understanding of people and processes.</p>
+        </div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>My journey sits across technology, business analysis and pharmacy. I'm developing my career in AI engineering while pursuing a Bachelor of Pharmacy degree at the University of Port Harcourt.</p>
+            <p>My interest goes beyond training models. I enjoy understanding a problem, working with data, building a solution and thinking about how that solution can be useful to the people who need it.</p>
+            <p>I'm particularly interested in AI applications, healthcare technology, data-driven products and intelligent automation.</p>
+          </div>
+          <div class="facts">
+            <div class="fact"><strong>AI & ML</strong><span>Model development and applied learning</span></div>
+            <div class="fact"><strong>Business Analysis</strong><span>Requirements and process thinking</span></div>
+            <div class="fact"><strong>B.Pharm</strong><span>University of Port Harcourt</span></div>
+            <div class="fact"><strong>Python</strong><span>Data analysis and machine learning</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <div><div class="eyebrow">02 / Selected work</div><h2>Projects in practice.</h2></div>
+          <p class="section-intro">A look at how I apply technical skills to practical problems, from predictive analytics to digital workflow tools.</p>
+        </div>
+        <div class="projects">
+          <article class="panel project">
+            <div class="project-top"><div class="project-symbol">01 / ML</div></div>
+            <div class="project-body">
+              <h3>GIMMI — AI Post Performance Predictor</h3>
+              <p>A machine-learning application designed to help a content strategy agency estimate Instagram post performance. Built with a Random Forest model and a dataset of approximately 30,000 Instagram records, the tool turns content inputs into performance predictions through a Streamlit interface.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">Streamlit</span></div>
+              <a class="project-link" href="https://mfgeardllpqg9xfxapefpe.streamlit.app/" target="_blank" rel="noopener noreferrer">Open live project <span>↗</span></a>
+            </div>
+          </article>
+          <article class="panel project">
+            <div class="project-top green"><div class="project-symbol">02 / WEB</div></div>
+            <div class="project-body">
+              <h3>Church Check-In System</h3>
+              <p>A digital attendance prototype for children’s Sunday programmes. The system is designed to make check-ins easier to manage and provide a structured starting point for attendance records and follow-up workflows.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Web App</span><span class="tag">Workflow Design</span></div>
+              <a class="project-link" href="https://jcmmn4.csb.app/" target="_blank" rel="noopener noreferrer">Open live project <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-head">
+          <div><div class="eyebrow">03 / Toolkit</div><h2>Skills & capabilities.</h2></div>
+          <p class="section-intro">A growing toolkit focused on building, analysing and communicating useful technical solutions.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="panel skill"><h3>Programming & Data</h3><p>Python, Pandas, NumPy, data cleaning, exploratory data analysis and data-driven problem solving.</p></div>
+          <div class="panel skill"><h3>Machine Learning</h3><p>Scikit-learn, regression, classification, decision trees, random forests, neural networks and NLP foundations.</p></div>
+          <div class="panel skill"><h3>Application Development</h3><p>Streamlit, React, Firebase, Git and practical prototyping.</p></div>
+          <div class="panel skill"><h3>Business Analysis</h3><p>Requirements analysis, process understanding, problem definition and translating needs into solutions.</p></div>
+          <div class="panel skill"><h3>Product Thinking</h3><p>Problem-solving, user-focused thinking, workflow improvement and solution development.</p></div>
+          <div class="panel skill"><h3>Domain Knowledge</h3><p>Pharmaceutical sciences, pharmacology foundations and an interest in healthcare innovation.</p></div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-head">
+          <div><div class="eyebrow">04 / Background</div><h2>Experience & education.</h2></div>
+          <p class="section-intro">A multidisciplinary background shaping how I approach problems and build solutions.</p>
+        </div>
+        <div class="panel">
+          <div class="experience">
+            <div class="when">2025 — PRESENT</div>
+            <div><h3>Bachelor of Pharmacy (B.Pharm)</h3><div class="place">University of Port Harcourt</div><p>400-level Pharmacy student developing a foundation in pharmaceutical sciences, pharmacology and the science behind healthcare.</p></div>
+          </div>
+          <div class="experience">
+            <div class="when">2025</div>
+            <div><h3>Certified Business Analyst</h3><div class="place">P-Cube Tech Academy</div><p>Training in business analysis, understanding business needs and approaching problems through structured analysis.</p></div>
+          </div>
+          <div class="experience">
+            <div class="when">PROFESSIONAL EXPERIENCE</div>
+            <div><h3>Obani Pharmaceuticals Limited</h3><div class="place">Oyo State, Nigeria</div><p>Six months of employment following a three-month volunteer period, gaining exposure to a pharmaceutical business environment.</p></div>
+          </div>
+          <div class="experience">
+            <div class="when">PROJECT / CONTRACT WORK</div>
+            <div><h3>Gannaz / Ganance — Content Strategy & Business Support</h3><div class="place">Content strategy agency</div><p>Supported administrative coordination, content research, strategy proposals, design and writing. Developed GIMMI to support data-informed Instagram content decisions.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact">
+          <div><div class="eyebrow">05 / Contact</div><h2>Let's build something useful.</h2><p>Open to conversations, collaborations and opportunities in AI engineering, applied machine learning, business analysis and healthcare technology.</p></div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:byemisi08@gmail.com">Email me ↗</a>
+            <a class="btn" href="https://www.linkedin.com/in/oluwayemisi-babalola-8a876a27b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Oluwayemisi Babalola. Built with curiosity and purpose.</span><a class="textlink" href="#home">Back to top ↑</a></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navlinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
